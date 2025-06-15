@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #0033cc, #cc66ff);
+}
+
+#root {
+  padding: 1rem;
+}

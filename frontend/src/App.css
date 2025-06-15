@@ -1,0 +1,66 @@
+.app-container {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.upload-box {
+  background: linear-gradient(to bottom, #c6f9ec, #aad0f3);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  width: 260px;
+  text-align: center;
+}
+
+.chatbox {
+  flex: 1;
+  background: linear-gradient(to right, #ccffcc, #99ccff);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+}

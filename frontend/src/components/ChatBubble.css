@@ -1,0 +1,53 @@
+.chat-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+/* Align to right if user */
+.user-row {
+  justify-content: flex-end;
+}
+
+/* Align to left if bot */
+.bot-row {
+  justify-content: flex-start;
+}
+
+/* Circle avatar next to message */
+.chat-avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.user-avatar {
+  background-color: #8a2be2; /* purple */
+}
+
+.bot-avatar {
+  background-color: #00cfff; /* cyan/blue */
+}
+
+/* Bubble styling */
+.chat-bubble {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  word-break: break-word;
+  display: inline-block;
+  color: black;
+  font-size: 0.95rem;
+}
+
+.user-bubble {
+  background-color: #d1e7ff;
+  text-align: right;
+}
+
+.bot-bubble {
+  background-color: white;
+  text-align: left;
+}

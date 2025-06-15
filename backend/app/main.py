@@ -12,7 +12,12 @@ app.add_middleware(
 )
 
 @app.post("/ask")
-async def ask_question(file: UploadFile, question: str = Form(...)):
+async def ask_question(
+    file: UploadFile,
+    question: str = Form(...),
+    use_web_fallback: bool = Form(False)
+):
     pdf_bytes = await file.read()
-    answer = process_pdf_and_answer(pdf_bytes, question)
+    answer = process_pdf_and_answer(pdf_bytes, question, use_web_fallback)
     return {"answer": answer}
+
