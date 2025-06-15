@@ -18,16 +18,23 @@ function App() {
     const formData = new FormData();
     formData.append('file', pdfFile);
     formData.append('question', question);
+    formData.append('use_web_fallback', 'true'); // 🟢 Enable web fallback
 
-    const res = await fetch('http://localhost:8000/ask', {
-      method: 'POST',
-      body: formData
-    });
+    try {
+      const res = await fetch('http://localhost:8000/ask', {
+        method: 'POST',
+        body: formData
+      });
 
     const data = await res.json();
     setMessages(prev => [...prev, { role: 'bot', content: data.answer }]);
     setQuestion('');
+      } catch (err) {
+    console.error("Fetch failed:", err);
+    setMessages(prev => [...prev, { role: 'bot', content: "Something went wrong. Try again." }]);
+      }
   };
+
 
   return (
     <div className="app-container">
