@@ -57,3 +57,11 @@ input[type='file'] {
 .custom-upload-button:hover {
   background-color: #483d8b;
 }
+
+.file-info {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #222;
+  font-style: italic;
+}
